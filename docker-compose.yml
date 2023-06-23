@@ -1,7 +1,6 @@
-version: '3.9'
+version: "3.9"
 services:
-
-  mongodb: 
+  mongodb:
     image: mongo
     container_name: mongo-db
     networks:
@@ -29,7 +28,7 @@ services:
       - PORT=3000
       - MONGODB_HOST=mongodb
       - MONGODB_PORT=27017
-    depends_on: 
+    depends_on:
       - mongodb
 
 networks:
