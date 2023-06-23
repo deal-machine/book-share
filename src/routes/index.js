@@ -1,18 +1,15 @@
 import { Router } from 'express';
-import { books } from '../db/models/Book.js';
+import bookRouters from './bookRoutes.js';
 
 const routes = Router();
+
+routes.use('/books', bookRouters);
 
 routes.get('/', (req, resp) => {
     return resp.status(200).json({message: "Main page"});
 })
 
-routes.get('/books', async (req, resp) => {
-    const allBooks = await books.find().exec();
-    return resp.status(200).json(allBooks);
-})
-routes.get('/authors', (req, resp) => {
-    
+routes.get('/authors', (req, resp) => {    
     return resp.status(200).json({message: "Author page"});
 })
 
