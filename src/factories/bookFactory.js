@@ -1,5 +1,5 @@
 import { BookController } from "../controllers/bookController.js";
-import { BookRepository } from "../repositories/bookRepository.js";
+import { BookRepository } from "../db/repositories/bookRepository.js";
 
 export class BookFactory {
   static register = () => {

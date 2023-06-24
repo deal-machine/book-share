@@ -1,4 +1,4 @@
-import { books } from "../db/models/Book.js";
+import { books } from "../models/Book.js";
 
 export class BookRepository {
   constructor() {
