@@ -42,6 +42,7 @@ export class BookController {
         .status(201)
         .json({ message: `Success on create bookId ${bookCreated._id}` });
     } catch (error) {
+      console.error(error.message);
       return response.status(500).json({ message: "Internal server error" });
     }
   };

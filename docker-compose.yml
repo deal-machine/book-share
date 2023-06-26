@@ -13,6 +13,7 @@ services:
     environment:
       - MONGO_INITDB_ROOT_USERNAME=root
       - MONGO_INITDB_ROOT_PASSWORD=M0nG0
+      - MONGO_INITDB_ROOT_DATABASE=preacher
 
   app:
     container_name: app-node
@@ -28,6 +29,8 @@ services:
       - PORT=3000
       - MONGODB_HOST=mongodb
       - MONGODB_PORT=27017
+      - MONGODB_DATABASE=preacher
+
     depends_on:
       - mongodb
 
